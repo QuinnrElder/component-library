@@ -6,7 +6,6 @@ import { FOCUS_STYLES } from "../../../util/styles";
 
 import type { BASE_OPTIONS } from "../../../util/types";
 
-
 export const ACTIVE_TAB = css`
   border: 3px solid blue;
   border-bottom: none;
@@ -21,10 +20,11 @@ export const Nav = styled.nav`
 `;
 
 export const TabExampleContainer = styled.section<BASE_OPTIONS>`
-	width: 30%;
+	width: 40%;
   margin: auto;
+  margin-bottom: 3rem;
   h1 {
-    font-size: 4rem;
+    font-size: 3.5rem;
     width: 100%;
   }
 `;
@@ -35,11 +35,11 @@ export const Button = styled.button`
 	border: 3px solid black;
 	border-bottom: none;
 	cursor: pointer;
-	font-size: 1.2rem;
+	font-size: 1.1rem;
 	margin: 0.25rem;
 	margin-bottom: 0;
 	margin-left: 0;
-	padding: 1rem 0;
+	padding: .5rem 0;
 	width: 10rem;
   border-radius: 1rem 1rem 0 0;
 	&:hover {

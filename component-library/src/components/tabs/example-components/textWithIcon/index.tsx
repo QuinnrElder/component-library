@@ -37,7 +37,7 @@ export const TextWithIcon = ({
 			iconTitle={iconTitle}
 		>
 			<Icon className={iconClassName}>{iconName}</Icon>
-			<div>{iconTitle}</div>
+			<p>{iconTitle}</p>
 		</TextWithIconContainer>
 	);
 };
