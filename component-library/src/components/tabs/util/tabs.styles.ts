@@ -8,7 +8,10 @@ import type { BASE_OPTIONS } from "../../../util/types";
 
 export const ACTIVE_TAB = css`
   border: 3px solid blue;
-  border-bottom: none;
+
+	@media (min-width: 80rem) {
+		border-bottom: none;
+  }
 `;
 
 // STYLED COMPONENTS
@@ -24,8 +27,18 @@ export const TabExampleContainer = styled.section<BASE_OPTIONS>`
   margin: auto;
   margin-bottom: 3rem;
   h1 {
-    font-size: 3.5rem;
-    width: 100%;
+    font-size: 2rem;
+  }
+
+	@media (min-width: 60rem) {
+		h1 {
+			font-size: 2rem;
+		}
+  }
+	@media (min-width: 80rem) {
+		h1 {
+			font-size: 3rem;
+		}
   }
 `;
 
@@ -33,25 +46,55 @@ export const Button = styled.button`
 	${FOCUS_STYLES}
 	background-color: white;
 	border: 3px solid black;
-	border-bottom: none;
+  border-radius: 1rem;
 	cursor: pointer;
-	font-size: 1.1rem;
-	margin: 0.25rem;
-	margin-bottom: 0;
-	margin-left: 0;
-	padding: .5rem 0;
-	width: 10rem;
-  border-radius: 1rem 1rem 0 0;
+	font-size: .7rem;
+	padding: 0;
+	margin: 0 .25rem .5rem;
+	width: 6rem;
 	&:hover {
 		border: 3px solid blue;
-		border-bottom: none;
+
+		i {
+			color: blue;
+		}
 	}
+
+	p {
+		display: none;
+	} 
+
+	@media (min-width: 40rem) {
+		width: 10rem;
+  }
+	
+	@media (min-width: 60rem) {
+		padding: .5rem 0;
+    font-size: 1rem;
+		width: 10rem;
+		p {
+			display: block;
+		} 
+  }
+	
+	@media (min-width: 80rem) {
+		border-radius: 1rem 1rem 0 0;
+		border-bottom: none;
+		margin: 0.25rem 0 0;
+		&:hover {
+			border-bottom: none;
+		}
+  }
 `;
 
 export const TabPanelContainer = styled.div<BASE_OPTIONS>`
 	border: 3px solid black;
-  border-radius: 0 1rem 1rem;
+  border-radius: 1rem;
 	text-align: center;
+
+	@media (min-width: 80rem) {
+    border-radius: 0 1rem 1rem;
+  }
 `;
 
 export const TabPanel = styled.div<BASE_OPTIONS>`

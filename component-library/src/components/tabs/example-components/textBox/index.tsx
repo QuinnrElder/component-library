@@ -6,7 +6,12 @@ import type { BASE_OPTIONS } from "../../../../util/types";
 import type { TEXT_BOX_PROPS } from "./textBox.types";
 
 const TextBoxContainer = styled.div<BASE_OPTIONS>`
-	font-size: 1.5rem;
+	@media (min-width: 60rem) {
+		font-size: 1.5rem;
+	}
+	@media (min-width: 80rem) {
+		font-size: 1.75rem;
+	}
 `;
 
 export const TextBox = ({

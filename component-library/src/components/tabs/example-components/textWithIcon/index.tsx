@@ -8,10 +8,14 @@ import { FOCUS_STYLES } from "../../../../util/styles";
 import { BASE_OPTIONS } from "../../../../util/types";
 import { TEXT_WITH_ICON_PROPS } from "./textWithIcon";
 
-const TextWithIconContainer = styled.div<BASE_OPTIONS | TEXT_WITH_ICON_PROPS>``;
+const TextWithIconContainer = styled.div<BASE_OPTIONS | TEXT_WITH_ICON_PROPS>`
+	p {
+		margin: 0;
+	}
+`;
 const Icon = styled.i<BASE_OPTIONS | TEXT_WITH_ICON_PROPS>`
 	margin: auto;
-	padding: 0.75rem 1rem 0;
+	padding: 0.25rem;
 `;
 
 export const TextWithIcon = ({

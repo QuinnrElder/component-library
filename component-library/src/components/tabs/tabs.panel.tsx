@@ -19,9 +19,6 @@ export const Panel = ({
 }: BASE_OPTIONS) => {
 	const { activeTab } = useTabs();
 	const isActive = activeTab === id;
-	console.log(isActive, "isActive");
-	console.log(activeTab, "activeTab");
-	console.log(id, "id");
 
 	return (
 		<TabPanel
