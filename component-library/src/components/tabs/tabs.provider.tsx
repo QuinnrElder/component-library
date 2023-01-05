@@ -1,8 +1,8 @@
 /** @jsxImportSource @emotion/react */
 import { ReactElement, useMemo, useState } from "react";
 
-import { TabsContext } from "./tabs.hooks";
-import type { TABS_PROPS } from "./tabs.types";
+import { TabsContext } from "./util/tabs.hooks";
+import type { TABS_PROPS } from "./util/tabs.types";
 
 export const TABS = ({
 	activeTabId,

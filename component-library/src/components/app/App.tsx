@@ -1,21 +1,15 @@
 import "./App.css";
+import { TabExample } from "../tabs";
+import { TABS_MOCK_DATA } from "../tabs/util/tabs.data";
 
 function App() {
 	return (
 		<div className="App">
-			<header className="App-header">
-				<p>
-					Edit <code>src/App.js</code> and save to reload.
-				</p>
-				<a
-					className="App-link"
-					href="https://reactjs.org"
-					target="_blank"
-					rel="noopener noreferrer"
-				>
-					Learn React
-				</a>
-			</header>
+			<TabExample
+				header={TABS_MOCK_DATA.header}
+				tabDetails={TABS_MOCK_DATA.tabDetails}
+				activeTabId={"one"}
+			/>
 		</div>
 	);
 }

@@ -3,11 +3,11 @@ import React from "react";
 
 import { css } from "@emotion/react";
 
-import { useTabs } from "./tabs.hooks";
+import { useTabs } from "./util/tabs.hooks";
 
 import type { BASE_OPTIONS } from "../../util/types";
 
-import { TabPanel } from "./tabs.styles";
+import { TabPanel } from "./util/tabs.styles";
 import { FOCUS_STYLES } from "../../util/styles";
 
 export const Panel = ({
@@ -19,6 +19,9 @@ export const Panel = ({
 }: BASE_OPTIONS) => {
 	const { activeTab } = useTabs();
 	const isActive = activeTab === id;
+	console.log(isActive, "isActive");
+	console.log(activeTab, "activeTab");
+	console.log(id, "id");
 
 	return (
 		<TabPanel

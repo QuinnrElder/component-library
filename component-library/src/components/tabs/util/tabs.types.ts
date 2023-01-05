@@ -6,7 +6,7 @@ import type {
   SetStateAction
 } from 'react';
 
-import type { BASE_OPTIONS } from '../../util/types';
+import type { BASE_OPTIONS } from '../../../util/types';
 
 // INDEX
 export interface TABS_EXAMPLE_PROPS extends BASE_OPTIONS {

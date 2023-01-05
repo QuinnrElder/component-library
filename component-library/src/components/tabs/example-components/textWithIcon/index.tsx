@@ -3,7 +3,7 @@ import React, { ReactElement } from "react";
 
 import { css } from "@emotion/react";
 import styled from "@emotion/styled";
-import { useTabs } from "../../tabs.hooks";
+import { useTabs } from "../../util/tabs.hooks";
 import { FOCUS_STYLES } from "../../../../util/styles";
 import { BASE_OPTIONS } from "../../../../util/types";
 import { TEXT_WITH_ICON_PROPS } from "./textWithIcon";

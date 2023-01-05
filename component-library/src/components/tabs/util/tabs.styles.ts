@@ -2,9 +2,9 @@
 import { css } from "@emotion/react";
 import styled from "@emotion/styled";
 
-import { FOCUS_STYLES } from "../../util/styles";
+import { FOCUS_STYLES } from "../../../util/styles";
 
-import type { BASE_OPTIONS } from "../../util/types";
+import type { BASE_OPTIONS } from "../../../util/types";
 
 
 export const ACTIVE_TAB = css`

@@ -3,7 +3,7 @@ import React, { ReactElement } from "react";
 
 import { css } from "@emotion/react";
 
-import { useTabFocus, useTabs } from "./tabs.hooks";
+import { useTabFocus, useTabs } from "./util/tabs.hooks";
 import { Panel } from "./tabs.panel";
 import { Tab } from "./tabs.tab";
 import { TABS } from "./tabs.provider";
@@ -12,9 +12,9 @@ import {
 	Nav,
 	TabExampleContainer,
 	TabPanelContainer,
-} from "./tabs.styles";
+} from "./util/tabs.styles";
 
-import type { TABS_EXAMPLE_PROPS } from "./tabs.types";
+import type { TABS_EXAMPLE_PROPS } from "./util/tabs.types";
 import { VISUALLY_HIDDEN } from "../../util/styles";
 
 const TabList = ({ tabDetails }: TABS_EXAMPLE_PROPS): ReactElement => {
@@ -46,7 +46,7 @@ const TabList = ({ tabDetails }: TABS_EXAMPLE_PROPS): ReactElement => {
 	);
 };
 
-const TabExample = ({
+export const TabExample = ({
 	"data-cy": dataCy,
 	activeTabId,
 	className,
@@ -80,4 +80,3 @@ const TabExample = ({
 		</TabExampleContainer>
 	);
 };
-export default TabExample;

@@ -1,9 +1,9 @@
 /** @jsxImportSource @emotion/react */
 import React from "react";
 
-import type { TAB_BUTTON_PROPS } from "./tabs.types";
-import { useTabs } from "./tabs.hooks";
-import { Button } from "./tabs.styles";
+import type { TAB_BUTTON_PROPS } from "./util/tabs.types";
+import { useTabs } from "./util/tabs.hooks";
+import { Button } from "./util/tabs.styles";
 
 export const Tab = React.forwardRef(
 	(
