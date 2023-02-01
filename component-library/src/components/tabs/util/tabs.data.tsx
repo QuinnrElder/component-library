@@ -2,7 +2,10 @@ import { TextBox } from "../example-components/textBox";
 import { TextWithIcon } from "../example-components/textWithIcon";
 
 export const TABS_MOCK_DATA = {
-	header: "Dynamic & Accessible Tabs Example",
+	"data-cy": "tabs-example",
+	header: 'Dynamic & Accessible Tabs Example',
+	id: 'tab-example-container',
+	activeTabId: 'one',
 	tabDetails: [
 		{
 			id: "one",
