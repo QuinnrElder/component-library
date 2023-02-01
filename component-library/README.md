@@ -3,6 +3,12 @@ Component-Library is where all the magic happens --or just a little for now, lol
 
 - currently the only component in the library is TABS.
 
+## Install Directions
+- fork repo
+- git clone your fork
+- `cd component-library/component-library`
+- `npm i`
+
 ## Available Scripts
 
 In the project directory, you can run project locally:
