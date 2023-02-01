@@ -4,6 +4,12 @@ Component-Library is where all the magic happens --or just a little for now, lol
 
 - currently the only component in the library is TABS.
 
+## Install Directions
+- fork repo
+- git clone your fork
+- `cd component-library/component-library`
+- `npm i`
+
 ## Available Scripts
 
 In the project directory, you can run project locally:
@@ -19,7 +25,7 @@ The page will reload when you make any code changes.
 
 This will run the Cypress testing suite for the exercise!
 
-##Validation
+## Validation
 
 Once you have completed the challenge and all tests are passing you should should have a component that looks like the image below!
 **Note: Dont forget to run `Axe-Devtools` on the component to ensure it's accessible to others.
