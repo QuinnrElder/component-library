@@ -22,7 +22,7 @@ const TabList = ({ tabDetails }: TABS_EXAMPLE_PROPS): ReactElement => {
 	const { activeTab } = useTabs();
 
 	return (
-		<Nav role="tablist" aria-labelledby={"tabs-navigation"}>
+		<Nav>
 			<label id={"tabs-navigation"} css={VISUALLY_HIDDEN}>
 				tabs navigation
 			</label>

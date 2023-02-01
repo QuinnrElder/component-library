@@ -22,7 +22,7 @@ export const Nav = styled.nav`
   justify-content: start;
 `;
 
-export const TabExampleContainer = styled.section<BASE_OPTIONS>`
+export const TabExampleContainer = styled.div<BASE_OPTIONS>`
 	width: 40%;
   margin: auto;
   margin-bottom: 3rem;
@@ -42,7 +42,7 @@ export const TabExampleContainer = styled.section<BASE_OPTIONS>`
   }
 `;
 
-export const Button = styled.button`
+export const Button = styled.div`
 	${FOCUS_STYLES}
 	background-color: white;
 	border: 3px solid black;

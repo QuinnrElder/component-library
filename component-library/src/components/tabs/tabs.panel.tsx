@@ -26,7 +26,6 @@ export const Panel = ({
 			className={className}
 			data-cy={dataCy}
 			id={`panel-${id}`}
-			role="tabpanel"
 			tabIndex={0}
 			css={css`
 				${FOCUS_STYLES}

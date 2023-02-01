@@ -1,6 +1,6 @@
 import React from 'react'
-import { TabExample } from './index'
-import { TABS_MOCK_DATA } from './util/tabs.data'
+import { TabExample } from '../../components/tabs';
+import { TABS_MOCK_DATA } from '../../components/tabs/util/tabs.data';
 
 describe('Creating Semantic & Accessible Tabs Through TDD', () => {
   beforeEach(() => {
@@ -14,28 +14,27 @@ describe('Creating Semantic & Accessible Tabs Through TDD', () => {
     
   it('Should have a TabExampleContainer Elements', () => {
     // Should have a section with correct aria-labelledby attribute
-    cy.get('section[data-cy=tabs-example]').should('have.attr', '', 'tab-example-container');
+    cy.get('section[data-cy=tabs-example]').should('have.attr', 'aria-labelledby', 'tab-example-container');
     // Should have a header with an id that corresponds to the TabExampleContainer aria-labelledby value
-    cy.get('h1').should('have.id', '');
-    // https://www.youtube.com/watch?v=ULdkpU51hTQ ~5min -through- 6:12min
+    cy.get('h1').should('have.id', 'tab-example-container');
   })
   
   it('Should have a Tabs List and Corresponding Elements', () => {
-    // Should have a nav with correct role and aria-labelledby attribute value
-    cy.get('').should('have.attr', 'aria-labelledby', '');
+    // Should have a nav with correct aria-labelledby attribute
+    cy.get('nav[role=tablist]').should('have.attr', 'aria-labelledby', 'tabs-navigation');
     // Should have a label with an id that corresponds to the nav aria-labelledby value
-    cy.get('label').should('have.text', 'tabs-navigation');
+    cy.get('label').should('have.id', 'tabs-navigation');
   });
   
   it('Should have Tab Elements', () => {
-    // Should have button elements with role=tab each with correct attributes, labels, and roles
+    // Should have button elements each with correct attributes, labels, and roles
     cy.get('button[role=tab]').each((el, i) => {
       // should have correct aria-selected and tabindex
       if (i === 0) {
-        expect(el).to.have.attr('', '');
+        expect(el).to.have.attr('aria-selected', 'true');
       } else {
-        expect(el).to.have.attr('', '');
-        expect(el).to.have.attr('tabindex', '');
+        expect(el).to.have.attr('aria-selected', 'false');
+        expect(el).to.have.attr('tabindex', '-1');
       }
   
       // aria-controls should correspond to a tabpanel with matching id
@@ -83,7 +82,7 @@ describe('Creating Semantic & Accessible Tabs Through TDD', () => {
 
   it('Should have Correct Keyboard Interactions', () => {
     // right, left, down, and up arrows move focus to the next/previous tab
-    cy.get('button[role=tab]').first().focus().type('{rightArrow}');
+    cy.get('[role=tab]').first().focus().type('{rightArrow}');
     cy.get('[role=tab]').eq(1).should('be.focused').type('{leftArrow}');
     cy.get('[role=tab]').first().should('be.focused').type('{downArrow}');
     cy.get('[role=tab]').eq(1).should('be.focused').type('{upArrow}');
@@ -106,7 +105,7 @@ describe('Creating Semantic & Accessible Tabs Through TDD', () => {
   });
 
   it('Should have Correct Mouse Interactions', () => {
-    cy.get('button[role=tab]').each((primaryTab, primaryIndex) => {
+    cy.get('[role=tab]').each((primaryTab, primaryIndex) => {
       cy.wrap(primaryTab)
         .click()
         .invoke('attr', 'aria-controls')
@@ -128,3 +127,38 @@ describe('Creating Semantic & Accessible Tabs Through TDD', () => {
     });
   });
 });
+
+
+// TAB
+{/* <Button
+  aria-controls={`panel-${id}`}
+  aria-selected={activeTab === id ? true : false}
+  className={className}
+  css={emoCSS}
+  data-cy={dataCy}
+  id={id}
+  onClick={() => setActiveTab(id)}
+  onKeyDown={keyDownHandler}
+  ref={ref}
+  role="tab"
+  tabIndex={activeTab === id ? undefined : -1}
+>
+  {children}
+</Button> */}
+
+// TAB PANEL
+{/* <TabPanel
+  aria-labelledby={id}
+  className={className}
+  data-cy={dataCy}
+  id={`panel-${id}`}
+  role="tabpanel"
+  tabIndex={0}
+  css={css`
+    ${FOCUS_STYLES}
+    display: ${isActive ? "block" : "none"};
+    ${emoCSS}
+  `}
+  >
+  {children}
+</TabPanel> */}
