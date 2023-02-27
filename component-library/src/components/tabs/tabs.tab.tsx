@@ -21,6 +21,7 @@ export const Tab = React.forwardRef(
 
 		return (
 			<Button
+			    aria-controls={`panel-${id}`}
 				aria-selected={activeTab === id ? true : false}
 				className={className}
 				css={emoCSS}
@@ -28,7 +29,8 @@ export const Tab = React.forwardRef(
 				id={id}
 				onClick={() => setActiveTab(id)}
 				onKeyDown={keyDownHandler}
-				// ref={ref} -comment back in once you have begun to solve for "Should have Tab Elements"
+				ref={ref}
+				role={'tab'}
 				tabIndex={activeTab === id ? undefined : -1}
 			>
 				{children}
